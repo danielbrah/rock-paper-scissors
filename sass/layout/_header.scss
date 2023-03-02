@@ -10,3 +10,11 @@ header
     border-radius: 8px;
     padding: 24px 12px;
 }
+
+@media only screen and (min-width: 1366px)
+{
+    header
+    {
+        width: 696px;
+    }
+}

@@ -5,6 +5,14 @@
   box-sizing: border-box;
 }
 
+.mobile {
+  display: block;
+}
+
+.desktop {
+  display: none;
+}
+
 body {
   background: hsl(237deg, 49%, 15%);
 }
@@ -14,8 +22,22 @@ body {
   background: radial-gradient(ellipse at top, hsl(214deg, 47%, 23%), hsl(237deg, 49%, 15%));
 }
 
+@media only screen and (min-width: 1366px) {
+  .mobile {
+    display: none;
+  }
+  .desktop {
+    display: block;
+  }
+}
 #score-container {
   font-family: "Barlow Semi Condensed", sans-serif;
+}
+#score-container p {
+  color: hsl(229deg, 64%, 46%);
+  font-size: 14px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
 }
 
 #score-container {
@@ -36,6 +58,12 @@ header {
   border: 4px solid hsl(217deg, 16%, 45%);
   border-radius: 8px;
   padding: 24px 12px;
+}
+
+@media only screen and (min-width: 1366px) {
+  header {
+    width: 696px;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

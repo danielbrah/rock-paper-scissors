@@ -5,6 +5,9 @@
     box-sizing: border-box;
 }
 
+.mobile{display: block;}
+.desktop{display: none;}
+
 body{
     background: hsl(237, 49%, 15%);
 }
@@ -13,4 +16,10 @@ body{
 {
     height: 100vh;
     background: radial-gradient(ellipse at top, hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+}
+
+@media only screen and (min-width: 1366px)
+{
+    .mobile{display: none;}
+    .desktop{display: block;}
 }
