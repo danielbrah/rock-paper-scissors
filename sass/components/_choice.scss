@@ -1,0 +1,72 @@
+@import '../abstracts/colors';
+.choice
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    height: 127px;
+    width: 129px;
+    border-radius: 50%;
+    z-index: 1;
+
+    &__bg
+    {
+        height: 75%;
+        width: 75%;
+        border-radius: 50%;
+        position: absolute;
+        background: white;
+    }
+
+    img{z-index: 1;}
+}
+
+#rock
+{
+    background: radial-gradient(ellipse at top, map-get($rock, 'light'), map-get($rock, 'dark'));
+    bottom: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#paper
+{
+    background: radial-gradient(ellipse at top, map-get($paper, 'light'), map-get($paper, 'dark'));
+    top: -70px;
+    left: -70px;
+}
+
+#scissors
+{
+    background: radial-gradient(ellipse at top, map-get($scissors, 'light'), map-get($scissors, 'dark'));
+    top: -70px;
+    right: -70px;
+}
+
+@media only screen and (min-width: 1366px)
+{
+    .choice
+    {
+        height: 203px;
+        width: 198px;
+    }
+
+    #rock
+    {
+        bottom: -60px;
+        left: 50%;
+    }
+
+    #paper
+    {
+        top: -100px;
+        left: -100px;
+    }
+
+    #scissors
+    {
+        top: -100px;
+        right: -100px;
+    }
+}
