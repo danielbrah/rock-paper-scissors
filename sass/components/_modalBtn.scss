@@ -1,0 +1,28 @@
+#modal__btn
+{
+    position: absolute;
+    bottom: 45px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: none;
+    border: 1px solid white;
+    border-radius: 8px;
+    padding: 8px 32px;
+}
+
+@media only screen and (min-width: 1366px)
+{
+    #modal__btn
+    {
+        left: auto;
+        right: 35px;
+        bottom: 35px;
+        transform: none;
+        cursor: pointer;
+        transition: background 75ms ease;
+
+        &:hover{
+            background: white;
+        }
+    }
+}

@@ -14,3 +14,27 @@ $barlow: 'Barlow Semi Condensed', sans-serif;
         text-transform: uppercase;
     }
 }
+
+#modal__btn
+{
+    font-size: 18px;
+    color: white;
+    text-transform: uppercase;
+    font-family: $barlow;
+    letter-spacing: 3px;
+    font-weight: 600;
+    transition: color 75ms ease;
+
+    &:hover{
+        color: black;
+    }
+}
+
+#rules-modal
+{
+    h1
+    {
+        font-family: $barlow;
+        text-transform: uppercase;
+    }
+}

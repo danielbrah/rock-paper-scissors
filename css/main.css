@@ -43,6 +43,24 @@ body {
   text-transform: uppercase;
 }
 
+#modal__btn {
+  font-size: 18px;
+  color: white;
+  text-transform: uppercase;
+  font-family: "Barlow Semi Condensed", sans-serif;
+  letter-spacing: 3px;
+  font-weight: 600;
+  transition: color 75ms ease;
+}
+#modal__btn:hover {
+  color: black;
+}
+
+#rules-modal h1 {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  text-transform: uppercase;
+}
+
 #score-container {
   display: flex;
   flex-direction: column;
@@ -110,6 +128,51 @@ body {
     right: -100px;
   }
 }
+#modal__btn {
+  position: absolute;
+  bottom: 45px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: none;
+  border: 1px solid white;
+  border-radius: 8px;
+  padding: 8px 32px;
+}
+
+@media only screen and (min-width: 1366px) {
+  #modal__btn {
+    left: auto;
+    right: 35px;
+    bottom: 35px;
+    transform: none;
+    cursor: pointer;
+    transition: background 75ms ease;
+  }
+  #modal__btn:hover {
+    background: white;
+  }
+}
+#overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: black;
+  z-index: 1;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 150ms ease, visibility 150ms ease;
+}
+#overlay.active {
+  opacity: 0;
+  visibility: hidden;
+}
+
+@media only screen and (min-width: 1366px) {
+  #overlay.active {
+    opacity: 0.5;
+    visibility: visible;
+  }
+}
 header {
   display: flex;
   align-items: center;
@@ -146,6 +209,45 @@ header {
   #game #triangle {
     width: 313px;
     height: 278px;
+  }
+}
+#rules-modal {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: white;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 100ms ease, visibility 100ms ease;
+}
+#rules-modal.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+@media only screen and (min-width: 1366px) {
+  #rules-modal {
+    width: 400px;
+    height: 415px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 8px;
+  }
+  #rules-modal #rules-heading {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    padding: 0 32px;
+  }
+  #rules-modal #rules-heading .close-modal {
+    cursor: pointer;
   }
 }
 
