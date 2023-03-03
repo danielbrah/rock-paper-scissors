@@ -9,6 +9,9 @@
     width: 129px;
     border-radius: 50%;
     z-index: 1;
+    cursor: pointer;
+
+    * {pointer-events: none;}
 
     &__bg
     {

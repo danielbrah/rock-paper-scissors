@@ -5,14 +5,50 @@
 
     &__phase__1
     {
+        opacity: 1;
+        visibility: visible;
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+        transition: opacity 50ms ease, visibility 50ms ease;
 
         #triangle{
             width: 180px;
             height: auto;
+        }
+
+        &.hidden
+        {
+            opacity: 0;
+            visibility: hidden;
+        }
+    }
+
+    &__phase__2
+    {
+        display: flex;
+        opacity: 0;
+        visibility: hidden;
+        position: absolute;
+        width: 307px;
+        justify-content: space-between;
+        align-items: center;
+        top: 100px;
+        left: 50%;
+        transform: translateX(-50%);
+        transition: opacity 60ms ease, visibility 60ms ease;
+
+        div{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &.show
+        {
+            opacity: 1;
+            visibility: visible;
         }
     }
 }

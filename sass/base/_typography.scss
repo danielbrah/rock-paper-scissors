@@ -38,3 +38,28 @@ $barlow: 'Barlow Semi Condensed', sans-serif;
         text-transform: uppercase;
     }
 }
+
+#game__phase__2
+{
+    #your-choice
+    {
+        p
+        {
+            text-transform: uppercase;
+            font-family: $barlow;
+            color: white;
+            letter-spacing: 1px;
+        }
+    }
+
+    #house-choice
+    {
+        p
+        {
+            text-transform: uppercase;
+            font-family: $barlow;
+            color: white;
+            letter-spacing: 1px;
+        }
+    }
+}
