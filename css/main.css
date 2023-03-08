@@ -83,7 +83,7 @@ body {
   border-radius: 8px;
 }
 
-.choice {
+.choice__icon {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -94,35 +94,44 @@ body {
   z-index: 1;
   cursor: pointer;
 }
-.choice * {
+.choice__icon * {
   pointer-events: none;
 }
-.choice__bg {
+.choice__icon__bg {
   height: 75%;
   width: 75%;
   border-radius: 50%;
   position: absolute;
   background: white;
 }
-.choice img {
+.choice__icon img {
   z-index: 1;
 }
 
-#rock {
+.rock-icon {
   background: radial-gradient(ellipse at top, hsl(349deg, 70%, 56%), hsl(349deg, 71%, 52%));
+}
+
+#rock {
   bottom: -40px;
   left: 50%;
   transform: translateX(-50%);
 }
 
-#paper {
+.paper-icon {
   background: radial-gradient(ellipse at top, hsl(230deg, 89%, 65%), hsl(230deg, 89%, 62%));
+}
+
+#paper {
   top: -70px;
   left: -70px;
 }
 
-#scissors {
+.scissors-icon {
   background: radial-gradient(ellipse at top, hsl(40deg, 84%, 53%), hsl(39deg, 89%, 49%));
+}
+
+#scissors {
   top: -70px;
   right: -70px;
 }

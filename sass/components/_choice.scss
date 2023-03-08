@@ -1,5 +1,5 @@
 @import '../abstracts/colors';
-.choice
+.choice__icon
 {
     display: flex;
     justify-content: center;
@@ -25,24 +25,36 @@
     img{z-index: 1;}
 }
 
-#rock
+.rock-icon
 {
     background: radial-gradient(ellipse at top, map-get($rock, 'light'), map-get($rock, 'dark'));
+}
+
+#rock
+{
     bottom: -40px;
     left: 50%;
     transform: translateX(-50%);
 }
 
-#paper
+.paper-icon
 {
     background: radial-gradient(ellipse at top, map-get($paper, 'light'), map-get($paper, 'dark'));
+}
+
+#paper
+{
     top: -70px;
     left: -70px;
 }
 
-#scissors
+.scissors-icon
 {
     background: radial-gradient(ellipse at top, map-get($scissors, 'light'), map-get($scissors, 'dark'));
+}
+
+#scissors
+{
     top: -70px;
     right: -70px;
 }
