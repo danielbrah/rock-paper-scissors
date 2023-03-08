@@ -25,7 +25,7 @@ const setImage = function(choice)
     playerChoice.classList.add(`${choice}-icon`)
     playerChoice.style.position = 'relative'
     img.src = `images/icon-${choice}.svg`
-    text.textContent = 'Your Choice'
+    text.textContent = 'You Picked'
 
     // Appending elements
     playerChoice.appendChild(img)

@@ -61,17 +61,27 @@
 
 @media only screen and (min-width: 1366px)
 {
-    .choice
+    .choice__icon
     {
         height: 203px;
         width: 198px;
     }
-
+    
     #rock
     {
         bottom: -60px;
         left: 50%;
     }
+
+    .rock-icon
+    {
+        img
+        {
+            width: 65px;
+            height: 65px;
+        }
+    }
+
 
     #paper
     {
@@ -79,9 +89,28 @@
         left: -100px;
     }
 
+    .paper-icon
+    {
+        img
+        {
+            width: 65px;
+            height: 75px;
+        }
+    }
+
+
     #scissors
     {
         top: -100px;
         right: -100px;
+    }
+
+    .scissors-icon
+    {
+        img
+        {
+            width: 65px;
+            height: 72px;
+        }
     }
 }

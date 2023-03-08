@@ -137,7 +137,7 @@ body {
 }
 
 @media only screen and (min-width: 1366px) {
-  .choice {
+  .choice__icon {
     height: 203px;
     width: 198px;
   }
@@ -145,13 +145,25 @@ body {
     bottom: -60px;
     left: 50%;
   }
+  .rock-icon img {
+    width: 65px;
+    height: 65px;
+  }
   #paper {
     top: -100px;
     left: -100px;
   }
+  .paper-icon img {
+    width: 65px;
+    height: 75px;
+  }
   #scissors {
     top: -100px;
     right: -100px;
+  }
+  .scissors-icon img {
+    width: 65px;
+    height: 72px;
   }
 }
 #modal__btn {
@@ -227,7 +239,7 @@ header {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  transition: opacity 50ms ease, visibility 50ms ease;
+  transition: opacity 150ms ease, visibility 150ms ease;
 }
 #game__phase__1 #triangle {
   width: 180px;
@@ -239,21 +251,22 @@ header {
 }
 #game__phase__2 {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
   opacity: 0;
   visibility: hidden;
   position: absolute;
   width: 307px;
-  justify-content: space-between;
-  align-items: center;
   top: 100px;
   left: 50%;
   transform: translateX(-50%);
-  transition: opacity 60ms ease, visibility 60ms ease;
+  transition: opacity 150ms ease, visibility 150ms ease;
 }
 #game__phase__2 div {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 16px;
 }
 #game__phase__2.show {
   opacity: 1;
