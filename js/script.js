@@ -71,7 +71,6 @@ modalBtn.addEventListener('click', () => {
 
 choice.forEach(element => {
     element.addEventListener('click', () => {
-        console.log(checkChoice(element))
         document.getElementById('game__phase__1').classList.toggle('hidden')
         document.getElementById('game__phase__2').classList.toggle('show')
     })
