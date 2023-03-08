@@ -39,15 +39,15 @@ const checkChoice = function(e) {
     {
         case 'rock':
             setImage('rock')
-            return 'Rock!'
+            return
 
         case 'paper':
             setImage('paper')
-            return 'Paper!'
+            return
 
         case 'scissors':
             setImage('scissors')
-            return 'Scissors!'
+            return
         
         default:
             return 'Error!'
@@ -71,6 +71,7 @@ modalBtn.addEventListener('click', () => {
 
 choice.forEach(element => {
     element.addEventListener('click', () => {
+        checkChoice(element)
         document.getElementById('game__phase__1').classList.toggle('hidden')
         document.getElementById('game__phase__2').classList.toggle('show')
     })
