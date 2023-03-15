@@ -41,18 +41,8 @@ $barlow: 'Barlow Semi Condensed', sans-serif;
 
 #game__phase__2
 {
-    #your-choice
-    {
-        p
-        {
-            text-transform: uppercase;
-            font-family: $barlow;
-            color: white;
-            letter-spacing: 1px;
-        }
-    }
 
-    #house-choice
+    & > div
     {
         p
         {
@@ -60,6 +50,7 @@ $barlow: 'Barlow Semi Condensed', sans-serif;
             font-family: $barlow;
             color: white;
             letter-spacing: 1px;
+            font-size: 21px;
         }
     }
 }

@@ -58,10 +58,22 @@
 {
     #game
     {
-        #triangle
+        &__phase__1
         {
-            width: 313px;
-            height: 278px;
+            #triangle
+            {
+                width: 313px;
+                height: 278px;
+            }
+        }
+
+        &__phase__2
+        {
+            width: 800px;
+            div{
+                flex-direction: column-reverse;
+                gap: 32px;
+            }
         }
     }
 }

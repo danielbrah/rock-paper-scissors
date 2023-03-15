@@ -61,17 +61,12 @@ body {
   text-transform: uppercase;
 }
 
-#game__phase__2 #your-choice p {
+#game__phase__2 > div p {
   text-transform: uppercase;
   font-family: "Barlow Semi Condensed", sans-serif;
   color: white;
   letter-spacing: 1px;
-}
-#game__phase__2 #house-choice p {
-  text-transform: uppercase;
-  font-family: "Barlow Semi Condensed", sans-serif;
-  color: white;
-  letter-spacing: 1px;
+  font-size: 21px;
 }
 
 #score-container {
@@ -274,9 +269,16 @@ header {
 }
 
 @media only screen and (min-width: 1366px) {
-  #game #triangle {
+  #game__phase__1 #triangle {
     width: 313px;
     height: 278px;
+  }
+  #game__phase__2 {
+    width: 800px;
+  }
+  #game__phase__2 div {
+    flex-direction: column-reverse;
+    gap: 32px;
   }
 }
 #rules-modal {
