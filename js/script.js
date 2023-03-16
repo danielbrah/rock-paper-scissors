@@ -14,6 +14,7 @@ const closeModal = function()
 
 const setImage = function(choice, parent, ...dimensions)
 {
+    // REFERENCE: dimensions = [width, height]
     // Creating element
     const img = document.createElement('img')
     const playerChoice = document.createElement('div')
@@ -25,8 +26,8 @@ const setImage = function(choice, parent, ...dimensions)
     playerChoice.classList.add('choice__icon')
     playerChoice.classList.add(`${choice}-icon`)
     playerChoice.style.position = 'relative'
-    playerChoice.style.height = '286px'
-    playerChoice.style.width = '292px'
+    playerChoice.style.height = `${window.innerWidth >= 1366 ? '286px' : '127px'}`
+    playerChoice.style.width = `${window.innerWidth >= 1366 ? '292px' : '129px'}`
     img.src = `images/icon-${choice}.svg`
     img.style.width = `${dimensions[0]}px`
     img.style.height = `${dimensions[1]}px`
@@ -45,15 +46,16 @@ const setHouseChoice = function()
     switch(Number(secret))
     {
         case 1:
-            setImage('rock', houseChoice, 90, 90)
+            setImage('rock', houseChoice, window.innerWidth >= 1366 ? 90 : 48, window.innerWidth >= 1366 ? 90 : 48)
             return
 
         case 2:
-            setImage('paper', houseChoice, 90, 100)
+            setImage('paper', houseChoice, window.innerWidth >= 1366 ? 90 : 49, window.innerWidth >= 1366 ? 100 : 59)
             return
 
         case 3:
-            setImage('scissors', houseChoice, 90, 97)
+            // DESKTOP: 90, 97
+            setImage('scissors', houseChoice, houseChoice, window.innerWidth >= 1366 ? 90 : 51, window.innerWidth >= 1366 ? 97 : 58)
             return
 
         default:
@@ -65,15 +67,15 @@ const checkChoice = function(e) {
     switch(e.getAttribute('id'))
     {
         case 'rock':
-            setImage('rock', yourChoice, 90, 90)
+            setImage('rock', yourChoice, window.innerWidth >= 1366 ? 90 : 48, window.innerWidth >= 1366 ? 90 : 48)
             return
 
         case 'paper':
-            setImage('paper', yourChoice, 90, 100)
+            setImage('paper', yourChoice, window.innerWidth >= 1366 ? 90 : 49, window.innerWidth >= 1366 ? 100 : 59)
             return
 
         case 'scissors':
-            setImage('scissors', yourChoice, 90, 97)
+            setImage('scissors', yourChoice, window.innerWidth >= 1366 ? 90 : 51, window.innerWidth >= 1366 ? 97 : 58)
             return
         
         default:

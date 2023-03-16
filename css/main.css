@@ -66,9 +66,13 @@ body {
   font-family: "Barlow Semi Condensed", sans-serif;
   color: white;
   letter-spacing: 1px;
-  font-size: 21px;
 }
 
+@media only screen and (min-width: 1366px) {
+  #game__phase__2 > div p {
+    font-size: 21px;
+  }
+}
 #score-container {
   display: flex;
   flex-direction: column;

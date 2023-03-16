@@ -50,7 +50,19 @@ $barlow: 'Barlow Semi Condensed', sans-serif;
             font-family: $barlow;
             color: white;
             letter-spacing: 1px;
-            font-size: 21px;
+        }
+    }
+}
+
+@media only screen and (min-width: 1366px)
+{
+    #game__phase__2
+    {
+        & > div
+        {
+            p{
+                font-size: 21px;
+            }
         }
     }
 }
