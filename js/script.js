@@ -25,9 +25,7 @@ const setImage = function(choice, parent, ...dimensions)
     bg.classList.add('choice__icon__bg')
     playerChoice.classList.add('choice__icon')
     playerChoice.classList.add(`${choice}-icon`)
-    playerChoice.style.position = 'relative'
-    playerChoice.style.height = `${window.innerWidth >= 1366 ? '286px' : '127px'}`
-    playerChoice.style.width = `${window.innerWidth >= 1366 ? '292px' : '129px'}`
+    playerChoice.classList.add('result-icon')
     img.src = `images/icon-${choice}.svg`
     img.style.width = `${dimensions[0]}px`
     img.style.height = `${dimensions[1]}px`
@@ -54,7 +52,6 @@ const setHouseChoice = function()
             return
 
         case 3:
-            // DESKTOP: 90, 97
             setImage('scissors', houseChoice, houseChoice, window.innerWidth >= 1366 ? 90 : 51, window.innerWidth >= 1366 ? 97 : 58)
             return
 
@@ -83,6 +80,14 @@ const checkChoice = function(e) {
     }
 }
 
+const transition = function() 
+{
+    setTimeout(() => { 
+        console.log('wassup')
+        setHouseChoice()
+    }, 5000)
+}
+
 closeBtn.forEach(element =>{
     element.addEventListener('click', closeModal)
 })
@@ -101,7 +106,7 @@ modalBtn.addEventListener('click', () => {
 choice.forEach(element => {
     element.addEventListener('click', () => {
         checkChoice(element)
-        setHouseChoice()
+        transition()
         document.getElementById('game__phase__1').classList.toggle('hidden')
         document.getElementById('game__phase__2').classList.toggle('show')
     })

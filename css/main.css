@@ -107,6 +107,12 @@ body {
   z-index: 1;
 }
 
+.result-icon {
+  position: relative;
+  height: 127px;
+  width: 129px;
+}
+
 .rock-icon {
   background: radial-gradient(ellipse at top, hsl(349deg, 70%, 56%), hsl(349deg, 71%, 52%));
 }
@@ -139,6 +145,10 @@ body {
   .choice__icon {
     height: 203px;
     width: 198px;
+  }
+  .result-icon {
+    height: 286px;
+    width: 292px;
   }
   #rock {
     bottom: -60px;
@@ -208,6 +218,23 @@ body {
   #overlay.active {
     opacity: 0.5;
     visibility: visible;
+  }
+}
+#house-choice-placeholder {
+  background: hsl(237deg, 49%, 15%);
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 150ms ease, visibility 150ms ease;
+  height: 110px;
+  width: 110px;
+  border-radius: 50%;
+  display: none;
+}
+
+@media only screen and (min-width: 1366px) {
+  #house-choice-placeholder {
+    height: 226px;
+    width: 226px;
   }
 }
 header {

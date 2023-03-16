@@ -25,6 +25,13 @@
     img{z-index: 1;}
 }
 
+.result-icon
+{
+    position: relative;
+    height: 127px;
+    width: 129px;
+}
+
 .rock-icon
 {
     background: radial-gradient(ellipse at top, map-get($rock, 'light'), map-get($rock, 'dark'));
@@ -65,6 +72,12 @@
     {
         height: 203px;
         width: 198px;
+    }
+
+    .result-icon
+    {
+        height: 286px;
+        width: 292px;
     }
     
     #rock
