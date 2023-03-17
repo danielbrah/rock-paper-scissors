@@ -222,19 +222,19 @@ body {
 }
 #house-choice-placeholder {
   background: hsl(237deg, 49%, 15%);
-  opacity: 1;
-  visibility: visible;
-  transition: opacity 150ms ease, visibility 150ms ease;
   height: 110px;
   width: 110px;
   border-radius: 50%;
   display: none;
+  margin-bottom: 15px;
 }
 
 @media only screen and (min-width: 1366px) {
   #house-choice-placeholder {
+    display: none;
     height: 226px;
     width: 226px;
+    margin-bottom: 0;
   }
 }
 header {
@@ -290,7 +290,7 @@ header {
 }
 #game__phase__2 div {
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
   align-items: center;
   gap: 16px;
 }
@@ -306,10 +306,11 @@ header {
   }
   #game__phase__2 {
     width: 800px;
+    top: 80px;
   }
   #game__phase__2 div {
-    flex-direction: column-reverse;
-    gap: 32px;
+    flex-direction: column;
+    gap: 64px;
   }
 }
 #rules-modal {

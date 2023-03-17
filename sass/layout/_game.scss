@@ -41,7 +41,7 @@
 
         div{
             display: flex;
-            flex-direction: column;
+            flex-direction: column-reverse;
             align-items: center;
             gap: 16px;
         }
@@ -70,9 +70,10 @@
         &__phase__2
         {
             width: 800px;
+            top: 80px;
             div{
-                flex-direction: column-reverse;
-                gap: 32px;
+                flex-direction: column;
+                gap: 64px;
             }
         }
     }

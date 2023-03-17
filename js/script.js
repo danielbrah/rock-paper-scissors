@@ -5,6 +5,7 @@ const overlay = document.getElementById('overlay')
 const choice = document.querySelectorAll('.choice')
 const yourChoice = document.getElementById('your-choice')
 const houseChoice = document.getElementById('house-choice')
+const placeholder = document.getElementById('house-choice-placeholder')
 
 const closeModal = function() 
 {
@@ -19,7 +20,6 @@ const setImage = function(choice, parent, ...dimensions)
     const img = document.createElement('img')
     const playerChoice = document.createElement('div')
     const bg = document.createElement('div')
-    const text = document.createElement('p')
 
     // Setting image source and div classnames
     bg.classList.add('choice__icon__bg')
@@ -29,13 +29,11 @@ const setImage = function(choice, parent, ...dimensions)
     img.src = `images/icon-${choice}.svg`
     img.style.width = `${dimensions[0]}px`
     img.style.height = `${dimensions[1]}px`
-    text.textContent = `${parent == yourChoice ? 'You Picked' : 'The House Picked'}`
 
     // Appending elements
     playerChoice.appendChild(img)
     playerChoice.appendChild(bg)
     parent.appendChild(playerChoice)
-    parent.appendChild(text)
 }
 
 const setHouseChoice = function()
@@ -52,7 +50,7 @@ const setHouseChoice = function()
             return
 
         case 3:
-            setImage('scissors', houseChoice, houseChoice, window.innerWidth >= 1366 ? 90 : 51, window.innerWidth >= 1366 ? 97 : 58)
+            setImage('scissors', houseChoice, window.innerWidth >= 1366 ? 90 : 51, window.innerWidth >= 1366 ? 97 : 58)
             return
 
         default:
@@ -83,8 +81,8 @@ const checkChoice = function(e) {
 const transition = function() 
 {
     setTimeout(() => { 
-        console.log('wassup')
         setHouseChoice()
+        placeholder.style.display = 'none'
     }, 5000)
 }
 
