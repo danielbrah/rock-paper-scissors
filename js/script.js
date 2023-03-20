@@ -6,6 +6,7 @@ const choice = document.querySelectorAll('.choice')
 const yourChoice = document.getElementById('your-choice')
 const houseChoice = document.getElementById('house-choice')
 const placeholder = document.getElementById('house-choice-placeholder-container')
+const choices = {}
 
 const closeModal = function() 
 {
@@ -15,6 +16,7 @@ const closeModal = function()
 
 const setImage = function(choice, parent, ...dimensions)
 {
+    choices[`${parent == houseChoice ? 'houseChoice' : 'yourChoice'}`] = choice
     // REFERENCE: dimensions = [width, height]
     // Creating element
     const img = document.createElement('img')
@@ -78,6 +80,55 @@ const checkChoice = function(e) {
     }
 }
 
+const winner = function(yourChoice, houseChoice)
+{
+    if(yourChoice == houseChoice) console.log('Draw!')
+    else{
+
+        switch(yourChoice)
+        {
+            case 'rock':
+                switch(houseChoice)
+                {
+                    case 'paper':
+                        console.log('You lose')
+                        return
+                    
+                    case 'scissors':
+                        console.log('You win!')
+                }
+                return
+
+            case 'paper':
+                switch(houseChoice)
+                {
+                    case 'rock':
+                        console.log('You win!')
+                        return
+                    
+                    case 'scissors':
+                        console.log('You lose!')
+                }
+                return
+
+            case 'scissors':
+                switch(houseChoice)
+                {
+                    case 'paper':
+                        console.log('You win!')
+                        return
+                    
+                    case 'rock':
+                        console.log('You lose!')
+                }
+                return
+
+            default: 
+                console.log('Error')
+        }
+    }
+}
+
 const transition = function() 
 {
     placeholder.style.display = 'grid'
@@ -86,6 +137,7 @@ const transition = function()
     setTimeout(() => { 
         setHouseChoice()
         placeholder.style.display = 'none'
+        winner(choices.yourChoice, choices.houseChoice)
     }, 5000)
 }
 
