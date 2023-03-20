@@ -5,7 +5,7 @@ const overlay = document.getElementById('overlay')
 const choice = document.querySelectorAll('.choice')
 const yourChoice = document.getElementById('your-choice')
 const houseChoice = document.getElementById('house-choice')
-const placeholder = document.getElementById('house-choice-placeholder')
+const placeholder = document.getElementById('house-choice-placeholder-container')
 
 const closeModal = function() 
 {
@@ -80,6 +80,9 @@ const checkChoice = function(e) {
 
 const transition = function() 
 {
+    placeholder.style.display = 'grid'
+    placeholder.style.placeItems = 'center'
+    
     setTimeout(() => { 
         setHouseChoice()
         placeholder.style.display = 'none'

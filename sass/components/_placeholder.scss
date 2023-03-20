@@ -1,23 +1,28 @@
-#house-choice-placeholder
+#house-choice-placeholder-container
 {
-    background: hsl(237, 49%, 15%);
-    height: 110px;
-    width: 110px;
-    border-radius: 50%;
-    display: none;
-    margin-bottom: 15px;
+    height: 127px;
+    width: 129px;
+    #house-choice-placeholder
+    {
+        background: hsl(237, 49%, 15%);
+        height: 95.25px;
+        width: 96.75px;
+        border-radius: 50%;
+        margin-bottom: 15px;
+    }
 }
 
 @media only screen and (min-width: 1366px)
 {
-    #house-choice-placeholder
+    #house-choice-placeholder-container
     {
-        display: none;
-        height: 226px;
-        width: 226px;
-        // position: relative;
-        // top: 30px;
-        // right: 15px;
-        margin-bottom: 0;
+        height: 286px;
+        width: 292px;
+        #house-choice-placeholder
+        {
+            height: 214.5px;
+            width: 219px;
+            margin-bottom: 0;
+        }
     }
 }
