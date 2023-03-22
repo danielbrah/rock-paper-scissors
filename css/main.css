@@ -243,6 +243,16 @@ body {
     margin-bottom: 0;
   }
 }
+#results {
+  display: none !important;
+  gap: 5px !important;
+}
+
+#override {
+  display: flex !important;
+  gap: 5px !important;
+}
+
 header {
   display: flex;
   align-items: center;

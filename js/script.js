@@ -6,6 +6,9 @@ const choice = document.querySelectorAll('.choice')
 const yourChoice = document.getElementById('your-choice')
 const houseChoice = document.getElementById('house-choice')
 const placeholder = document.getElementById('house-choice-placeholder-container')
+const scoreText = document.getElementById('score')
+const results = document.getElementById('results')
+let score = 0
 const choices = {}
 
 const closeModal = function() 
@@ -82,7 +85,7 @@ const checkChoice = function(e) {
 
 const winner = function(yourChoice, houseChoice)
 {
-    if(yourChoice == houseChoice) console.log('Draw!')
+    if(yourChoice == houseChoice) document.getElementById('results-text').textContent = 'Draw!'
     else{
 
         switch(yourChoice)
@@ -91,23 +94,30 @@ const winner = function(yourChoice, houseChoice)
                 switch(houseChoice)
                 {
                     case 'paper':
-                        console.log('You lose')
+                        score != 0 && score < 0 ? score-- : score
+                        document.getElementById('results-text').textContent = 'You lose!'
                         return
                     
                     case 'scissors':
-                        console.log('You win!')
+                        score++ 
+                        scoreText.textContent = `${score}`
+                        document.getElementById('results-text').textContent = 'You win!'
                 }
+                
                 return
 
             case 'paper':
                 switch(houseChoice)
                 {
                     case 'rock':
-                        console.log('You win!')
+                        score++ 
+                        scoreText.textContent = `${score}`
+                        document.getElementById('results-text').textContent = 'You win!'
                         return
                     
                     case 'scissors':
-                        console.log('You lose!')
+                        score != 0 && score < 0 ? score-- : score
+                        document.getElementById('results-text').textContent = 'You lose!'
                 }
                 return
 
@@ -115,11 +125,14 @@ const winner = function(yourChoice, houseChoice)
                 switch(houseChoice)
                 {
                     case 'paper':
-                        console.log('You win!')
+                        score++ 
+                        scoreText.textContent = `${score}`
+                        document.getElementById('results-text').textContent = 'You win!'
                         return
                     
                     case 'rock':
-                        console.log('You lose!')
+                        score != 0 && score < 0 ? score-- : score
+                        document.getElementById('results-text').textContent = 'You lose!'
                 }
                 return
 
@@ -138,7 +151,8 @@ const transition = function()
         setHouseChoice()
         placeholder.style.display = 'none'
         winner(choices.yourChoice, choices.houseChoice)
-    }, 5000)
+        results.id = 'override'
+    }, 2000)
 }
 
 closeBtn.forEach(element =>{
