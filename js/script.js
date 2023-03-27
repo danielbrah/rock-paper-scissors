@@ -152,6 +152,7 @@ const transition = function()
         placeholder.style.display = 'none'
         winner(choices.yourChoice, choices.houseChoice)
         results.id = 'override'
+        document.getElementById('game__phase__2').style.width = `${window.innerWidth >= 1366 ? 925 : 307}px`
     }, 2000)
 }
 

@@ -1,4 +1,14 @@
+@import '../base/typography';
+@import '../abstracts/colors';
 #play-again
 {
-  
+  background: white;
+  border: none;
+  color: $dark;
+  text-transform: uppercase;
+  font-family: $barlow;
+  padding: 8px 53px;
+  border-radius: 8px;
+  font-size: 20px;
+  letter-spacing: 2px;
 }

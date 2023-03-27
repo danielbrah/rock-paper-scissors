@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap");
 *, *::after, *::before {
   margin: 0;
   padding: 0;
@@ -243,6 +244,58 @@ body {
     margin-bottom: 0;
   }
 }
+#score-container {
+  font-family: "Barlow Semi Condensed", sans-serif;
+}
+#score-container p {
+  color: hsl(229deg, 64%, 46%);
+  font-size: 14px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+#modal__btn {
+  font-size: 18px;
+  color: white;
+  text-transform: uppercase;
+  font-family: "Barlow Semi Condensed", sans-serif;
+  letter-spacing: 3px;
+  font-weight: 600;
+  transition: color 75ms ease;
+}
+#modal__btn:hover {
+  color: black;
+}
+
+#rules-modal h1 {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  text-transform: uppercase;
+}
+
+#game__phase__2 > div p {
+  text-transform: uppercase;
+  font-family: "Barlow Semi Condensed", sans-serif;
+  color: white;
+  letter-spacing: 1px;
+}
+
+@media only screen and (min-width: 1366px) {
+  #game__phase__2 > div p {
+    font-size: 21px;
+  }
+}
+#play-again {
+  background: white;
+  border: none;
+  color: hsl(229deg, 25%, 31%);
+  text-transform: uppercase;
+  font-family: "Barlow Semi Condensed", sans-serif;
+  padding: 8px 53px;
+  border-radius: 8px;
+  font-size: 20px;
+  letter-spacing: 2px;
+}
+
 #results {
   display: none !important;
   gap: 5px !important;
@@ -302,7 +355,7 @@ header {
   top: 100px;
   left: 50%;
   transform: translateX(-50%);
-  transition: opacity 150ms ease, visibility 150ms ease;
+  transition: opacity 150ms ease, visibility 150ms ease, width 150ms ease;
 }
 #game__phase__2 div {
   display: flex;
