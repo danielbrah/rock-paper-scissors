@@ -294,6 +294,8 @@ body {
   border-radius: 8px;
   font-size: 20px;
   letter-spacing: 2px;
+  white-space: nowrap;
+  cursor: pointer;
 }
 
 #results {
@@ -303,7 +305,7 @@ body {
 
 #override {
   display: flex !important;
-  gap: 5px !important;
+  gap: 15px !important;
 }
 
 header {
