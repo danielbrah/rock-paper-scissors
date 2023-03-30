@@ -95,7 +95,8 @@ const winner = function(yourChoice, houseChoice)
                 switch(houseChoice)
                 {
                     case 'paper':
-                        score != 0 && score < 0 ? score-= score : score
+                        score != 0 && score > 0 ? score-- : score
+                        scoreText.textContent = `${score}`
                         document.getElementById('results-text').textContent = 'You lose!'
                         return
                     
@@ -117,7 +118,8 @@ const winner = function(yourChoice, houseChoice)
                         return
                     
                     case 'scissors':
-                        score != 0 && score < 0 ? score-= score : score
+                        score != 0 && score > 0 ? score-- : score
+                        scoreText.textContent = `${score}`
                         document.getElementById('results-text').textContent = 'You lose!'
                 }
                 return
@@ -132,7 +134,8 @@ const winner = function(yourChoice, houseChoice)
                         return
                     
                     case 'rock':
-                        score != 0 && score < 0 ? score-= score : score
+                        score != 0 && score > 0 ? score-- : score
+                        scoreText.textContent = `${score}`
                         document.getElementById('results-text').textContent = 'You lose!'
                 }
                 return
