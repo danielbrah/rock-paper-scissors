@@ -8,6 +8,7 @@ const houseChoice = document.getElementById('house-choice')
 const placeholder = document.getElementById('house-choice-placeholder-container')
 const scoreText = document.getElementById('score')
 const results = document.getElementById('results')
+const reset = document.getElementById('play-again')
 let score = 0
 const choices = {}
 
@@ -94,7 +95,7 @@ const winner = function(yourChoice, houseChoice)
                 switch(houseChoice)
                 {
                     case 'paper':
-                        score != 0 && score < 0 ? score-- : score
+                        score != 0 && score < 0 ? score-= score : score
                         document.getElementById('results-text').textContent = 'You lose!'
                         return
                     
@@ -116,7 +117,7 @@ const winner = function(yourChoice, houseChoice)
                         return
                     
                     case 'scissors':
-                        score != 0 && score < 0 ? score-- : score
+                        score != 0 && score < 0 ? score-= score : score
                         document.getElementById('results-text').textContent = 'You lose!'
                 }
                 return
@@ -131,7 +132,7 @@ const winner = function(yourChoice, houseChoice)
                         return
                     
                     case 'rock':
-                        score != 0 && score < 0 ? score-- : score
+                        score != 0 && score < 0 ? score-= score : score
                         document.getElementById('results-text').textContent = 'You lose!'
                 }
                 return
@@ -169,6 +170,14 @@ document.addEventListener('keydown', e => {
 modalBtn.addEventListener('click', () => {
     modal.classList.toggle('active')
     overlay.classList.toggle('active')
+})
+
+reset.addEventListener('click', () =>{
+    document.getElementById('game__phase__1').classList.toggle('hidden')
+    document.getElementById('game__phase__2').classList.toggle('show')
+    results.id = 'results'
+    document.getElementById('game__phase__2').style.width = `${window.innerWidth >= 1366 ? 800 : 307}px`
+    for(const element of document.querySelectorAll('.result-icon')) element.remove();
 })
 
 choice.forEach(element => {
